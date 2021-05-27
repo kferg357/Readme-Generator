@@ -8,7 +8,7 @@ inquirer
     .prompt(
         [
             {
-                name: "title",
+                name: "Title",
                 type: "input",
                 message: "Whats the project title?",
                 validate: (value) => { if (value) { return true } else { return 'I need a value to continue' } },
@@ -34,7 +34,7 @@ inquirer
                 validate: (value) => { if (value) { return true } else { return 'I need a value to continue' } },
             },
             {
-                name: "Guidelines",
+                name: "Contributions",
                 type: "input",
                 message: "Enter your contribution guidelines?",
                 validate: (value) => { if (value) { return true } else { return 'I need a value to continue' } },
@@ -66,55 +66,64 @@ inquirer
             },
         ]
     ).then(({
-        title,
-        description,
-        installation,
-        usage,
-        guidelines,
-        test,
-        email,
+        Title,
+        Description,
+        Instructions,
+        Contributions,
+        Installation,
+        Usage,
+        Test,
+        Email,
         License,
-        github
+        Github
     }) => {
         //template to be used 
-        const template = `# ${title}
+        const template = `# ${Title}
+        * Table of Contents
         * ['Installation'](#installation)
         * ['Usage'](#usage)
-        * ['Guidelines'](#guidelines)
+        * ['Instructions'](#instructions)
+        * ['Decscription'](#description)
         * ['Contributions'](#contributions)
         * ['Credentials'](#credentials)
         * ['License'](#license)
         * ['Test'](#test)
         
-        
+         # Title
+         ${Title}
         # Installation
-        ${installation}
+        ${Installation}
         # Usage 
-        ${usage}
-        # Contribution
-        ${contribution}
+        ${Usage}
+        # Description
+        ${Description}
+        # Contributions
+        ${Contributions}
         # Instructions
-        ${instructions}
-        # Credentials
-        ${credentials}
+        ${Instructions}
         # License
-        ${license}
+        ![badge](https://img.shields.io/badge/License-${License}-brightgreen)
+        This application is covered by the ${License} Licsense.
+        # Test
+        ${Test}
 
         # Contact
-        * Github :${github}
-        * Email :${email}`;
+        * Github :${Github}
+        * Email :${Email}`;
 
-        createNewFile(title, template);
+        createNewFile(Title, template);
     }
     );
 
     
-    fs.writeFile(`./s(filename.tolowerCase().split{' '}.join{' '}).nd`, data,(err)=> {
-        if(err) {
+    function createNewFile(Title, template) {
+    fs.writeFile(`${Title}.md`, template, (err) => {
+        if (err) {
             console.log(err)
         }
         console.log('Your README has been prepared');
     })
+}
 
 
 
