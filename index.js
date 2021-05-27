@@ -102,7 +102,8 @@ inquirer
         # Instructions
         ${Instructions}
         # License
-        ![badge](https://img.shields.io/badge/License-${License}-brightgreen)
+        [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+        
         This application is covered by the ${License} Licsense.
         # Test
         ${Test}
