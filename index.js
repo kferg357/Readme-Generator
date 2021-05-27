@@ -79,38 +79,38 @@ inquirer
     }) => {
         //template to be used 
         const template = `# ${Title}
-        * Table of Contents
-        * ['Installation'](#installation)
-        * ['Usage'](#usage)
-        * ['Instructions'](#instructions)
-        * ['Decscription'](#description)
-        * ['Contributions'](#contributions)
-        * ['Credentials'](#credentials)
-        * ['License'](#license)
-        * ['Test'](#test)
+* Table of Contents
+* ['Installation'](#installation)
+* ['Usage'](#usage)
+* ['Instructions'](#instructions)
+* ['Decscription'](#description)
+* ['Contributions'](#contributions)
+* ['Credentials'](#credentials)
+* ['License'](#license)
+* ['Test'](#test)
         
-         # Title
-         ${Title}
-        # Installation
-        ${Installation}
-        # Usage 
-        ${Usage}
-        # Description
-        ${Description}
-        # Contributions
-        ${Contributions}
-        # Instructions
-        ${Instructions}
-        # License
-        [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
-        
-        This application is covered by the ${License} Licsense.
-        # Test
-        ${Test}
+# Title
+${Title}
+# Installation
+${Installation}
+# Usage 
+${Usage}
+# Description
+${Description}
+# Contributions
+${Contributions}
+# Instructions
+${Instructions}
+# License
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
-        # Contact
-        * Github :${Github}
-        * Email :${Email}`;
+This application is covered by the ${License} Licsense.
+# Test
+${Test}
+
+# Contact
+* Github :${Github}
+* Email :${Email}`;
 
         createNewFile(Title, template);
     }
