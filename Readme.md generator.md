@@ -1,4 +1,4 @@
-# dfdf
+# Readme.md generator
 * Table of Contents
 * ['Installation'](#installation)
 * ['Usage'](#usage)
@@ -10,24 +10,24 @@
 * ['Test'](#test)
         
 # Title
-dfdf
+Readme.md generator
 # Installation
-dfdf
+fs and inquirer
 # Usage 
-dfd
+you type up the information in which you want in your app
 # Description
-fdfd
+a command line function that will make a readme markdown
 # Contributions
-fdf
+none
 # Instructions
 undefined
 # License
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
-This application is covered by the The ISC License Licsense.
+This application is covered by the The GMU License Licsense.
 # Test
-df
+none
 
 # Contact
-* Github :dfdf
-* Email :df
+* Github :kferg357@github.com
+* Email :KennethFerguson90@gmail.com

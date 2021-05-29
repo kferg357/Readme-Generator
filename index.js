@@ -2,6 +2,27 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 
+function licenseBadge(data) {
+    const licenseType = data.License[0];
+    let licensceString = " "
+    if (licenseType === "MIT") {
+        license =  `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+    };
+    if (licenseType === "Apache") {
+        license =  `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+    };
+    if (licenseType === "GPL") {
+        license =  `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+    };
+
+    if (licenseType === "N/A") {
+        license =  `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
+    };
+
+    if (licenseType === "GMU") {
+        license =  ``
+    };
+}
 
 
 inquirer
