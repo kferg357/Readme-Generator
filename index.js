@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { inherits } = require('util');
 
 
 function licenseBadge(data) {
@@ -20,7 +21,7 @@ function licenseBadge(data) {
     };
 
     if (licenseType === "GMU") {
-        license =  ``
+        license =  `[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
     };
 }
 
@@ -57,7 +58,7 @@ inquirer
             {
                 name: "Contributions",
                 type: "input",
-                message: "Enter your contribution guidelines?",
+                message: "Enter your contributions?",
                 validate: (value) => { if (value) { return true } else { return 'I need a value to continue' } },
             },
             {
@@ -67,16 +68,23 @@ inquirer
                 validate: (value) => { if (value) { return true } else { return 'I need a value to continue' } },
             },
             {
-                name: "Email",
-                type: "input",
-                message: "Enter email address?",
-                validate: (value) => { if (value) { return true } else { return 'I need a value to continue' } },
-            },
-            {
                 name: "License",
                 type: "list",
                 message: "What license did you use?",
                 choices: ['The MIT Lisence', 'The GPL License', 'Apache License', 'The ISC License', 'The GMU License', 'N/A'],
+                validate: (value) => { if (value) { return true } else { return 'I need a value to continue' } },
+            },
+            {
+                name: "Questions",
+                type: "input",
+                message: "If there are any questions, please fill free to leave comments below or contact me with the information provided below here?",
+                validate: (value) => { if (value) { return true } else { return 'I need a value to continue' } },
+            },
+
+            {
+                name: "Email",
+                type: "input",
+                message: "Enter email address?",
                 validate: (value) => { if (value) { return true } else { return 'I need a value to continue' } },
             },
             {
@@ -93,10 +101,12 @@ inquirer
         Contributions,
         Installation,
         Usage,
-        Test,
-        Email,
+        Test,  
         License,
+        Questions,
+        Email,
         Github
+        
     }) => {
         //template to be used 
         const template = `# ${Title}
@@ -109,6 +119,8 @@ inquirer
 * ['Credentials'](#credentials)
 * ['License'](#license)
 * ['Test'](#test)
+* ['Questions'](#questions)
+
         
 # Title
 ${Title}
@@ -129,7 +141,8 @@ This application is covered by the ${License} Licsense.
 # Test
 ${Test}
 
-# Contact
+# Questions
+${Questions}
 * Github :${Github}
 * Email :${Email}`;
 
@@ -146,6 +159,7 @@ ${Test}
         console.log('Your README has been prepared');
     })
 }
+
 
 
 
