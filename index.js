@@ -2,10 +2,16 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 
+     
+
+
+
+
 
 
 function licenseBadge(data) {
-    const licenseType = data.License[0];
+    console.log(data)
+    const licenseType = data;
     let licenseString;
     if (licenseType === "MIT") {
         license =  `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
@@ -25,7 +31,8 @@ function licenseBadge(data) {
         license =  `[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
     };
 
-    return licenseString
+    return license
+    // const licenseBadge = licenseBadge(License)
 }
 
 
@@ -111,7 +118,8 @@ inquirer
         Github
         
     }) => {
-        //template to be used 
+       const badge = licenseBadge(License)
+       console.log(badge) //template to be used 
         const template = `# ${Title}
 * Table of Contents
 * ['Installation'](#installation)
@@ -138,7 +146,7 @@ ${Contributions}
 # Instructions
 ${Instructions}
 # License
-${License}
+${badge}
 
 
 This application is covered by the ${License} Licsense.

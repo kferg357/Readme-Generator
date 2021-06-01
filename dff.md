@@ -1,4 +1,4 @@
-# dfdf
+# dff
 * Table of Contents
 * ['Installation'](#installation)
 * ['Usage'](#usage)
@@ -12,13 +12,13 @@
 
         
 # Title
-dfdf
+dff
 # Installation
-fdf
+dfd
 # Usage 
-dfd
+fdfd
 # Description
-dfd
+df
 # Contributions
 fdf
 # Instructions
@@ -33,5 +33,5 @@ dfd
 
 # Questions
 dfdf
-* Github :dfdf
-* Email :dfd
+* Github :dfd
+* Email :df
