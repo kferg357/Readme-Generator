@@ -138,7 +138,7 @@ ${Contributions}
 # Instructions
 ${Instructions}
 # License
-${data.License[0]}
+${License}
 
 
 This application is covered by the ${License} Licsense.
