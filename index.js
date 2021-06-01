@@ -1,11 +1,12 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { inherits } = require('util');
+
+
 
 
 function licenseBadge(data) {
     const licenseType = data.License[0];
-    let licensceString = " "
+    let licenseString = " "
     if (licenseType === "MIT") {
         license =  `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
     };
@@ -23,6 +24,8 @@ function licenseBadge(data) {
     if (licenseType === "GMU") {
         license =  `[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
     };
+
+    return licenseString
 }
 
 
@@ -71,7 +74,7 @@ inquirer
                 name: "License",
                 type: "list",
                 message: "What license did you use?",
-                choices: ['The MIT Lisence', 'The GPL License', 'Apache License', 'The ISC License', 'The GMU License', 'N/A'],
+                choices: ['MIT', 'GPL', 'Apache', 'ISC', 'GMU', 'N/A'],
                 validate: (value) => { if (value) { return true } else { return 'I need a value to continue' } },
             },
             {
@@ -135,7 +138,7 @@ ${Contributions}
 # Instructions
 ${Instructions}
 # License
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+
 
 This application is covered by the ${License} Licsense.
 # Test
