@@ -6,7 +6,7 @@ const fs = require('fs');
 
 function licenseBadge(data) {
     const licenseType = data.License[0];
-    let licenseString = " "
+    let licenseString;
     if (licenseType === "MIT") {
         license =  `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
     };
@@ -138,6 +138,7 @@ ${Contributions}
 # Instructions
 ${Instructions}
 # License
+${data.License[0]}
 
 
 This application is covered by the ${License} Licsense.
