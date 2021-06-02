@@ -1,33 +1,36 @@
-# Readme.md generator
+# README.md Generator
 * Table of Contents
 * ['Installation'](#installation)
 * ['Usage'](#usage)
 * ['Instructions'](#instructions)
 * ['Decscription'](#description)
 * ['Contributions'](#contributions)
-* ['Credentials'](#credentials)
 * ['License'](#license)
 * ['Test'](#test)
+* ['Questions'](#questions)
+
         
 # Title
-Readme.md generator
+README.md Generator
 # Installation
-fs and inquirer
+npm init, npm inquirer.
 # Usage 
-you type up the information in which you want in your app
+run node index.js and answer the prompted questions
 # Description
-a command line function that will make a readme markdown
+A node.js application that uses user input from inquirer to populate a README.MD file for user repository.
 # Contributions
-none
+Kenneth A. Ferguson
 # Instructions
 undefined
 # License
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
-This application is covered by the The GMU License Licsense.
+
+This application is covered by the ISC Licsense.
 # Test
 none
 
-# Contact
+# Questions
+N/A
 * Github :kferg357@github.com
-* Email :KennethFerguson90@gmail.com
+* Email :kennethferguson90@gmail.com
