@@ -13,11 +13,11 @@
 # Title
 README.md Generator
 # Installation
-npm init, npm inquirer.
+npm init, nmp install inquirer
 # Usage 
-run node index.js and answer the prompted questions
+Run the following command at the root of the project and answer the propmted questions. node index.js
 # Description
-A node.js application that uses user input from inquirer to populate a README.MD file for user repository.
+A node.js application that uses user unput from inquirer to populate a README.md file for user repository.
 # Contributions
 Kenneth A. Ferguson
 # Instructions
