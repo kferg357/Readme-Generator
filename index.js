@@ -2,13 +2,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 
-     
-
-
-
-
-
-
 function licenseBadge(data) {
     console.log(data)
     const licenseType = data;
@@ -182,16 +175,3 @@ ${Questions}
 
 
 
-
-
-
-
-    //     ]
-
-
-    //     const readmeContent = generateHtml(answers);
-    //     //    console.log('HContent:', HtmlContent)
-
-    //     fstat.writeFile('README.md', readmeContent, (err) => err ? console.log(err) : console.log("Successful")
-    //     );
-    // });
